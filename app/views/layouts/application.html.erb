@@ -9,10 +9,26 @@
   </head>
 
   <body>
+
+  <section id="container" >
+
+  
     <%= render "shared/navbar"%>
     <%= render "shared/sidebar"%>
-    <%= yield %>
-	<%= render "shared/footer"%>
+      <section id="main-content">
+          <section class="wrapper site-min-height">
 
+              <div class="row">
+                  
+                <%= yield %>
+                  
+                  
+      
+               </div>
+          </section>
+      </section>
+  <%= render "shared/footer"%>
+
+  </section>
   </body>
 </html>
