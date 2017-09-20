@@ -1,0 +1,2 @@
+class DiscProfile < ApplicationRecord
+end
