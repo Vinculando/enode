@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  decision: 1
+  interaccion: 1
+  serenidad: 1
+  cumplimiento: 1
+
+two:
+  decision: 1
+  interaccion: 1
+  serenidad: 1
+  cumplimiento: 1

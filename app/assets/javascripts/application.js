@@ -9,8 +9,19 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require Chart
 //= require jquery
+//= require jquery-1.8.3.min
+//= require bootstrap.min
+//= require jquery.dcjqaccordion.2.7
+//= require jquery.scrollTo.min
+//= require jquery.nicescroll
+//= require jquery.sparkline
+//= require common-scripts
+//= require jquery.gritter
+//= require gritter-conf
+//= require sparkline-chart
+//= require zabuto_calendar
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
