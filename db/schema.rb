@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170920184856) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> frontend
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "applications", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "publication_id"
@@ -219,4 +224,6 @@ ActiveRecord::Schema.define(version: 20170920184856) do
   add_foreign_key "users", "cities"
   add_foreign_key "users", "disc_profiles"
   add_foreign_key "users", "universities"
+=======
+>>>>>>> frontend
 end
