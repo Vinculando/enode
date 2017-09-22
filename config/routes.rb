@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboards/student'
+
+  get 'dashboards/company'
+
   resources :applications
   resources :publications
 
