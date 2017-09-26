@@ -16,6 +16,7 @@
  *= require jquery.gritter
  *= require style
  *= require style-responsive
+ *= require bootstrap-datepicker3
  *= require_tree .
  *= require_self
  */

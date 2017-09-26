@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'cancancan', '~> 2.0'
 # gem for authenticate users and company
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
+# gem for datepicker
+gem 'bootstrap-datepicker-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

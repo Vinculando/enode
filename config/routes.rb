@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   resources :publications
 
   devise_for :companies, path: 'companies', controllers: {
-
-      }
+    registrations: 'companies/registrations'
+  }
   devise_for :users, path: 'users', controllers: {
-
+    registrations: 'users/registrations'
       }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	root 'applications#index'
+	root 'dashboards#company'
 end

@@ -12,6 +12,7 @@ class User < ApplicationRecord
 
   belongs_to :city
   has_one :disc_profile
-  belongs_to :university
+  belongs_to :university, optional: true
+
 
 end

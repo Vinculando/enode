@@ -11,5 +11,19 @@ module Enode
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.to_prepare do
+      Devise::SessionsController.layout 'login'
+      Devise::RegistrationsController.layout proc{ |controller|
+        if company_signed_in?
+          "company"
+        elsif user_signed_in?
+          'user'
+        else
+          'login'
+        end }
+        Devise::PasswordsController.layout 'login'
+    end
+
   end
+
 end
