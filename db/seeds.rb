@@ -22,3 +22,4 @@ City.create!([
     {nombre: "Padre Hurtado", region_id: z}, 
     {nombre: "Peñaflor", region_id:z}, 
     {nombre: "Talagante", region_id: z}])
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

@@ -37,7 +37,7 @@ gem 'cancancan', '~> 2.0'
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # gem for datepicker
 gem 'bootstrap-datepicker-rails'
-
+gem 'activeadmin', github: 'activeadmin'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
