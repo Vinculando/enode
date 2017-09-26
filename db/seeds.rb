@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+z = 4
 
-#p = Region.create!(nombre: "Metropolitana")
-
-City.create!({nombre: "Lampa", region: "Metropolitana"}, {nombre: "Til Til",
-region: "Metropolitana"}, {nombre: "Pirque", region: "Metropolitana"}, {nombre:
-"Puente Alto", region: "Metropolitana"}, {nombre: "San José de Maipo", region: "Metropolitana"},
-{nombre: "Buin", region: "Metropolitana"},{nombre: "Calera de Tango", region:
-"Metropolitana"}, {nombre: "Paine", region: "Metropolitana"}, {nombre:
-"San Bernardo", region: "Metropolitana"}, {nombre: "Alhué", region: "Metropolitana"},
-{nombre: "Curacaví", region: "Metropolitana"}, {nombre: "María Pinto", region:
-"Metropolitana"}, {nombre: "Melipilla", region: "Metropolitana"}, {nombre:
-"San Pedro", region: "Metropolitana"}, {nombre: "Cerrillos", region: "Metropolitana"},
-{nombre: "Cerro Navia", region: "Metropolitana"}, {nombre: "Conchalí", region:
-"Metropolitana"}, {nombre: "El Bosque", region:
-"Metropolitana"}, {nombre: "Conchalí", region:
-"Metropolitana"})
+City.create!([
+	{nombre: "Quinta Normal", region_id: z}, 
+	{nombre: "Recoleta", region_id: z},
+	{nombre: "Renca", region_id: z},
+	{nombre:"San Miguel", region_id: z},
+	{nombre: "San Joaquín", region_id: z}, 
+	{nombre: "San Ramón", region_id: z},
+	{nombre: "Santiago", region_id: z}, 
+	{nombre: "Vitacura", region_id: z}, 
+    {nombre: "El Monte", region_id: z}, 
+    {nombre: "Isla de Maipo", region_id: z},
+    {nombre: "Padre Hurtado", region_id: z}, 
+    {nombre: "Peñaflor", region_id:z}, 
+    {nombre: "Talagante", region_id: z}])
