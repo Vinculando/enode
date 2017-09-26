@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enode - Empresas</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <section id="container" >
+    <%= render "shared/navbarCompany"%>
+    <%= render "shared/sidebarCompany"%>
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+
+              <div class="row">
+
+                <%= yield %>
+
+
+
+               </div>
+          </section>
+      </section>
+  <%= render "shared/footer"%>
+
+  </section>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
