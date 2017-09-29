@@ -1,41 +1,41 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Publications</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Problema</th>
-      <th>Limite</th>
-      <th>Description</th>
-      <th>Premios</th>
-      <th>Company</th>
-      <th>Area</th>
-      <th>Type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @publications.each do |publication| %>
-      <tr>
-        <td><%= publication.titulo %></td>
-        <td><%= publication.problema %></td>
-        <td><%= publication.limite %></td>
-        <td><%= publication.description %></td>
-        <td><%= publication.premios %></td>
-        <td><%= publication.company %></td>
-        <td><%= publication.area %></td>
-        <td><%= publication.type %></td>
-        <td><%= link_to 'Show', publication %></td>
-        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
-        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="row mt">
+  <div class="col-lg-12">
+    <h4 class="mb">
+      <i class="fa fa-angle-right"></i>Publicaciones
+    </h4>
+  </div>
+</div>
+<% @publications.each do |publication| %>
+<div class="row mt margin-minus">
+  <div class="col-lg-12">
+    <div class="form-panel">
+      <div class="row">
+        <div class="col-lg-8">
+          <%= publication.titulo %>
+          <br>
+          <%= publication.limite %>
+          <br>
+          <%= publication.type.nombre %>
+          <br>
+          <%= publication.problema %>
+          <br>
+          <%= publication.area.nombre %>
+          <br>
+          <%= link_to 'Ver Publicacion', publication %>
+        </div>
+        <div class="col-lg-4">
+          <%= publication.company.razon %>
+          <br>
+          <%= publication.company.email %>
+        </div>
+        <!--
+  <%= link_to 'Edit', edit_publication_path(publication) %>
+  <%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 <br>
-
 <%= link_to 'New Publication', new_publication_path %>
