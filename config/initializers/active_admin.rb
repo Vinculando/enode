@@ -1,4 +1,5 @@
 ActiveAdmin.setup do |config|
+  #config.register_javascript 'https://www.google.com/jsapi'
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -72,6 +73,7 @@ ActiveAdmin.setup do |config|
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
 
+
   # You can specify a method to be called on unauthorized access.
   # This is necessary in order to prevent a redirect loop which happens
   # because, by default, user gets redirected to Dashboard. If user
@@ -112,14 +114,14 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  # config.root_to = 'active_admin/devise/sessions#new'
 
   # == Admin Comments
   #
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+  config.comments = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -267,7 +269,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+   config.footer = 'ENODE Version Beta'
 
   # == Sorting
   #
