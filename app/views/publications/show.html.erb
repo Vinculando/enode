@@ -27,17 +27,17 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @publication.company %>
+  <%= @publication.company.razon %>
 </p>
 
 <p>
   <strong>Area:</strong>
-  <%= @publication.area %>
+  <%= @publication.area.nombre %>
 </p>
 
 <p>
   <strong>Type:</strong>
-  <%= @publication.type %>
+  <%= @publication.type.nombre %>
 </p>
 
 <%= link_to 'Edit', edit_publication_path(@publication) %> |

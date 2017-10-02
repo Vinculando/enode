@@ -22,8 +22,24 @@
 //= require jquery.gritter
 //= require gritter-conf
 //= require sparkline-chart
-//= require zabuto_calendar
-//= require bootstrap-datepicker
+//= require moment
+//= require moment/es.js
+//= require bootstrap-datetimepicker
+//= require bootstrap-select
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$("turbolinks:load", function () {
+                $('#datetimepicker2').datetimepicker({
+                  format: 'DD/MM/YYYY',
+                  icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down",
+                    previous: "fa fa-chevron-left",
+                    next: "fa fa-chevron-right"
+                }
+                });
+            });

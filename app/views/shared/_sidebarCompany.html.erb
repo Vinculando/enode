@@ -22,12 +22,16 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="<%= publications_path %>" >
+                      <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>Publicaciones</span>
                       </a>
+                      <ul class="sub">
+                          <li><a  href="<%= publications_path %>">Mis publicaciones</a></li>
+                          <li><a  href="<%= new_publication_path %>">Crear Publicacion</a></li>
+                      </ul>
                   </li>
-                  
+
               </ul>
               <!-- sidebar menu end-->
           </div>

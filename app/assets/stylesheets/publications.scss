@@ -4,3 +4,21 @@
 .margin-minus{
   margin-top: -30px;
 }
+.titulo{
+  display: inline-block;
+  padding-left: 30px;
+  h4{
+    float: left;
+  }
+  ul{
+    float: right;
+    font-size: 18px;
+    margin: 10px 20px;
+  }
+}
+.centrado{
+  ul{
+    float: right;
+    margin: 0 30px;
+  }
+}

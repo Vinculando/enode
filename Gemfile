@@ -36,8 +36,12 @@ gem 'cancancan', '~> 2.0'
 # gem for authenticate users and company
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # gem for datepicker
-gem 'bootstrap-datepicker-rails'
-
+gem 'bootstrap-select-rails'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+# gem for pagination
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
