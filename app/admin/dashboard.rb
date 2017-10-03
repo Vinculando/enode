@@ -20,31 +20,12 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
   end
-  #         ul do
-  #           Publication.last
-  #           # recent(5).map do |publication|
-  #           #   li link_to(publication.titulo, admin_post_path(publication))
-  #           # end
-  #         end
-  #       end
-  #     end
-  # end
     #   column do
     #     panel "Info" do
     #       para "Welcome to ActiveAdmin."
     #     end
     #   end
     # end
-    # columns do
-    #   column do
-    #     panel "Usuarios Creados" do
-    #       ul do
-    #         line_chart User.group_by_day(:created_at).count 
-            
-    #          end
-    #       end
-    #     end
-    #   end
 
 
 
