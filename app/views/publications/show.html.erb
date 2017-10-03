@@ -1,44 +1,61 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-lg-11 titulo">
+    <h3>
+      <i class="fa fa-arrow-right"></i>
+      <%= @publication.titulo %></h3>
+    <p>creado el
+      <%= @publication.created_at.strftime("%d-%m-%Y") %></p>
+    <p class="margin-minus-minus">
+      <span class="label label-primary"><%= @publication.type.nombre %></span>
+      <span class="label label-info"><%= @publication.area.nombre %></span>
+    </p>
+  </div>
+</div>
+<div class="row mt margin-minus">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="form-panel show">
+      <h5>
+        <i class="fa fa-building"></i>
+        ¿Qué nos pasa?</h5>
+      <p>
+        <%= @publication.problema %>
+      </p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @publication.titulo %>
-</p>
+      <h5>
+        <i class="fa fa-graduation-cap"></i>
+        Que deberas hacer</h5>
+      <p>
+        <%= @publication.description %>
+      </p>
 
-<p>
-  <strong>Problema:</strong>
-  <%= @publication.problema %>
-</p>
+      <h5>
+        <i class="fa fa-trophy"></i>
+        Los premios</h5>
+      <p>
+        <%= @publication.premios %>
+      </p>
 
-<p>
-  <strong>Limite:</strong>
-  <%= @publication.limite %>
-</p>
+      <p>
+        <strong>Limite:</strong>
+        <%= @publication.limite %>
+      </p>
+      <hr>
+      <h3>Empresa
+        <%= @publication.company.razon %></h3>
 
-<p>
-  <strong>Description:</strong>
-  <%= @publication.description %>
-</p>
+      <p><%= @publication.company.resumen %></p>
 
-<p>
-  <strong>Premios:</strong>
-  <%= @publication.premios %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @publication.company.razon %>
-</p>
-
-<p>
-  <strong>Area:</strong>
-  <%= @publication.area.nombre %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @publication.type.nombre %>
-</p>
-
-<%= link_to 'Edit', edit_publication_path(@publication) %> |
-<%= link_to 'Back', publications_path %>
+    </div>
+  </div>
+</div>
+<div class="row mt margin-minus">
+  <div class="col-lg-10 col-lg-offset-1">
+      <div class="form-panel">
+        <h4><i class="fa fa-angle-right"></i> Acciones</h4>
+        <%= link_to 'Editar', edit_publication_path(@publication), class: "btn btn-default btn-lg" %>
+        <%= link_to 'Postulaciones', publication_application_path(@publication), class: "btn btn-info btn-lg" %>
+        <%= link_to 'Eliminar', @publication, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-lg" %>
+      </div>
+  </div>
+</div>

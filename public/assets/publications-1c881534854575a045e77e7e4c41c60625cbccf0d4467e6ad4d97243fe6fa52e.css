@@ -1,0 +1,50 @@
+/* line 4, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.margin-minus {
+  margin-top: -30px;
+}
+
+/* line 7, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.margin-minus-minus {
+  margin-top: -10px;
+}
+
+/* line 10, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.titulo {
+  display: inline-block;
+  padding-left: 30px;
+}
+/* line 13, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.titulo h4 {
+  float: left;
+}
+/* line 16, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.titulo h3 {
+  padding-left: 100px;
+}
+/* line 19, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.titulo p {
+  padding-left: 100px;
+}
+/* line 22, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.titulo ul {
+  float: right;
+  font-size: 18px;
+  margin: 10px 20px;
+}
+
+/* line 29, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.centrado ul {
+  float: right;
+  margin: 0 30px;
+}
+
+/* line 35, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.show h5 {
+  font-size: 18px;
+}
+/* line 38, /Volumes/matias/Dropbox/vinculando/enode/app/assets/stylesheets/publications.scss */
+.show p {
+  font-size: 15px;
+  margin: 10px 20px 30px;
+  white-space: pre-line;
+}
