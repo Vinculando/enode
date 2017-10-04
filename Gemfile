@@ -20,7 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem "chartkick"
+gem 'groupdate'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -32,16 +33,20 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # gem for ability
+gem 'active_skin'
 gem 'cancancan', '~> 2.0'
 # gem for authenticate users and company
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # gem for datepicker
+
 gem 'bootstrap-select-rails'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 # gem for pagination
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'activeadmin', github: 'activeadmin'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
