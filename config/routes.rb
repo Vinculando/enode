@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  get 'dashboards/student'
+
+  get 'dashboards/company'
+
   resources :applications
   resources :publications
 
   devise_for :companies, path: 'companies', controllers: {
-
-      }
+    registrations: 'companies/registrations'
+  }
   devise_for :users, path: 'users', controllers: {
-
+    registrations: 'users/registrations'
       }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	root 'applications#index'
+	root 'dashboards#company'
 end

@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# z = Area.create!(nombre: "logistica")
+# b = Type.create!(nombre: "practica")
+	
+
+# z = 4
+
+# City.create!([
+# 	{nombre: "Quinta Normal", region_id: z}, 
+# 	{nombre: "Recoleta", region_id: z},
+# 	{nombre: "Renca", region_id: z},
+# 	{nombre:"San Miguel", region_id: z},
+# 	{nombre: "San Joaquín", region_id: z}, 
+# 	{nombre: "San Ramón", region_id: z},
+# 	{nombre: "Santiago", region_id: z}, 
+# 	{nombre: "Vitacura", region_id: z}, 
+#     {nombre: "El Monte", region_id: z}, 
+#     {nombre: "Isla de Maipo", region_id: z},
+#     {nombre: "Padre Hurtado", region_id: z}, 
+#     {nombre: "Peñaflor", region_id:z}, 
+#     {nombre: "Talagante", region_id: z}])
+
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

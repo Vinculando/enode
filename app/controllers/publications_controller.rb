@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_entity!
   # GET /publications
   # GET /publications.json
   def index

@@ -3,12 +3,12 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="profile.html"><img src="<%= asset_path 'ui-sam.jpg' %>" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">E-node</h5>
-              	  	
+
+              	  <p class="centered"><a href="<%= edit_user_registration_path %>"><img src="<%= asset_path 'ui-sam.jpg' %>" class="img-circle" width="100"></a></p>
+              	  <h5 class="centered"><%= current_entity.nombre %></h5>
+
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="<%= dashboards_student_path %>">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>

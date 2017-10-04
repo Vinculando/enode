@@ -21,3 +21,13 @@
 
 en:
   hello: "Hello world"
+
+en:
+  active_admin:
+    resources:
+      admin_user:
+        new_model: 'Nuevo Usuario Administrador'
+      application:
+        new_model: 'Nueva Postulación'
+      publication:
+        new_model: 'Crear Publicación'
