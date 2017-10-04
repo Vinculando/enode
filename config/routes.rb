@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   get 'dashboards/company'
 
-  resources :applications
-  resources :publications
+  resources :publications do
+    resources :applications
+  end
 
   devise_for :companies, path: 'companies', controllers: {
     registrations: 'companies/registrations'

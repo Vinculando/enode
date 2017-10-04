@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -38,8 +38,15 @@ gem 'cancancan', '~> 2.0'
 # gem for authenticate users and company
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # gem for datepicker
-gem 'bootstrap-datepicker-rails'
+
+gem 'bootstrap-select-rails'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+# gem for pagination
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 gem 'activeadmin', github: 'activeadmin'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -13,11 +13,11 @@
  *= stub active_admin
  *= require bootstrap
  *= require font-awesome
- *= require zabuto_calendar
  *= require jquery.gritter
  *= require style
  *= require style-responsive
- *= require bootstrap-datepicker3
+ *= require bootstrap-datetimepicker
+ *= require bootstrap-select
  *= require_tree .
  *= require_self
  */

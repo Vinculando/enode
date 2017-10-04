@@ -1,3 +1,43 @@
 // Place all the styles related to the Publications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.margin-minus{
+    margin-top: -30px;
+}
+.margin-minus-minus{
+  margin-top: -10px;
+}
+.titulo{
+  display: inline-block;
+  padding-left: 30px;
+  h4{
+    float: left;
+  }
+  h3{
+    padding-left: 100px;
+  }
+  p{
+    padding-left: 100px;
+  }
+  ul{
+    float: right;
+    font-size: 18px;
+    margin: 10px 20px;
+  }
+}
+.centrado{
+  ul{
+    float: right;
+    margin: 0 30px;
+  }
+}
+.show{
+  h5{
+    font-size: 18px;
+  }
+  p{
+    font-size: 15px;
+    margin: 10px 20px 30px;
+    white-space: pre-line;
+  }
+}

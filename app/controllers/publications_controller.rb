@@ -4,7 +4,11 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.json
   def index
-    @publications = Publication.all
+    if company_signed_in?
+      @publications = Publication.where(company_id: current_company.id).page(params[:page]).per(6)
+    else
+      @publications = Publication.order('created_at DESC').page(params[:page]).per(6)
+    end
   end
 
   # GET /publications/1
@@ -25,7 +29,7 @@ class PublicationsController < ApplicationController
   # POST /publications.json
   def create
     @publication = Publication.new(publication_params)
-
+    @publication.company_id = current_company.id
     respond_to do |format|
       if @publication.save
         format.html { redirect_to @publication, notice: 'Publication was successfully created.' }
@@ -69,6 +73,6 @@ class PublicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def publication_params
-      params.require(:publication).permit(:titulo, :problema, :limite, :description, :premios, :company_id, :area_id, :type_id)
+      params.require(:publication).permit(:titulo, :problema, :limite, :description, :premios, :company_id, :area_id, :type_id, :page)
     end
 end

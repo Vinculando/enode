@@ -1,5 +1,5 @@
 /*---LEFT BAR ACCORDION----*/
-$(function() {
+$('turbolinks:load', function() {
     $('#nav-accordion').dcAccordion({
         eventType: 'click',
         autoClose: true,

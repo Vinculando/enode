@@ -80,8 +80,9 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.5.0)
-    bootstrap-datepicker-rails (1.7.1.1)
-      railties (>= 3.0)
+    bootstrap-select-rails (1.12.1)
+    bootstrap3-datetimepicker-rails (4.17.47)
+      momentjs-rails (>= 2.8.1)
     builder (3.2.3)
     byebug (9.1.0)
     cancancan (2.0.0)
@@ -133,6 +134,10 @@ GEM
     kaminari-activerecord (1.0.1)
       activerecord
       kaminari-core (= 1.0.1)
+
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kaminari-core (1.0.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -147,6 +152,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
+    momentjs-rails (2.17.1)
+      railties (>= 3.1)
     multi_json (1.12.2)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -258,7 +265,8 @@ DEPENDENCIES
   active_skin
   activeadmin!
   better_errors
-  bootstrap-datepicker-rails
+  bootstrap-select-rails
+  bootstrap3-datetimepicker-rails (~> 4.17.47)
   byebug
   cancancan (~> 2.0)
   chartkick
@@ -267,8 +275,11 @@ DEPENDENCIES
   groupdate
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
+  kaminari-bootstrap
   listen (~> 3.0.5)
-  pg (~> 0.18)
+  momentjs-rails (>= 2.9.0)
+  pg
   pry-rails
   puma (~> 3.0)
   railroady
