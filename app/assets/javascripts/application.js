@@ -31,6 +31,7 @@
 //= require jquery_ujs
 //= require turbolinks
 
+
 $("turbolinks:load", function () {
                 $('#datetimepicker2').datetimepicker({
                   format: 'DD/MM/YYYY',
