@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926195259) do
+ActiveRecord::Schema.define(version: 20171005153449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20170926195259) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.integer  "city_id"
+    t.string   "avatar"
     t.index ["city_id"], name: "index_companies_on_city_id", using: :btree
     t.index ["confirmation_token"], name: "index_companies_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_companies_on_email", unique: true, using: :btree
@@ -224,6 +225,7 @@ ActiveRecord::Schema.define(version: 20170926195259) do
     t.integer  "city_id"
     t.integer  "university_id"
     t.integer  "disc_profile_id"
+    t.string   "avatar"
     t.index ["city_id"], name: "index_users_on_city_id", using: :btree
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["disc_profile_id"], name: "index_users_on_disc_profile_id", using: :btree
