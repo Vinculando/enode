@@ -15,7 +15,7 @@
  *= require font-awesome
  *= require style
  *= require style-responsive
- *= require bootstrap-datetimepicker
+ *= require bootstrap-datetimepicker.min
  *= require bootstrap-select
  *= require_tree .
  *= require_self

@@ -1,8 +1,4 @@
-// # Place all the behaviors and hooks related to the matching controller here.
-// # All this logic will automatically be available in application.js.
-// # You can use CoffeeScript in this file: http://coffeescript.org/
-
-$(document).on("turbolinks:load", function () {
+$(document).on("ready", function() {
     $('#datetimepicker1').datetimepicker({
       //format: 'DD/MM/YYYY',
       icons: {
@@ -14,6 +10,7 @@ $(document).on("turbolinks:load", function () {
         next: "fa fa-chevron-right"
       }
     });
+
     $('.selectpicker').selectpicker({
       iconBase: 'fontawesome',
       tickIcon: 'facheck'

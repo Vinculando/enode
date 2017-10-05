@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
       new_user_session_path
     elsif resource_or_scope == :company
       new_company_session_path
-    else
-      root_path
     end
   end
 
@@ -21,4 +19,5 @@ class ApplicationController < ActionController::Base
       'user'
     end
   end
+
 end
