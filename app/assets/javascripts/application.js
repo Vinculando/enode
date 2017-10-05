@@ -30,7 +30,7 @@
 //= require bootstrap-select
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
 
 $("turbolinks:load", function () {
                 $('#datetimepicker2').datetimepicker({

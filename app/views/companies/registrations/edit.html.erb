@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-6">
 
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
           <%= devise_error_messages! %>
 
           <div class="form-group">
@@ -50,6 +50,14 @@
           <div class="form-group">
             <%= f.label 'ciudad', class: "col-sm-4 col-sm-4 control-label" %><br/>
             <%= grouped_collection_select :company, :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"}  %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label 'Foto', class: "col-sm-4 col-sm-4 control-label"  %><br/>
+            <%= f.file_field :avatar, class: "form-control" %>
+            <%= f.text_field :remote_avatar_url %>
+            <%= f.hidden_field :avatar_cache %>
+            <%= image_tag(current_entity.avatar) if current_entity.avatar? %>
           </div>
 
         </div>

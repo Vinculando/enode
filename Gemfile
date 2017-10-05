@@ -38,6 +38,11 @@ gem 'cancancan', '~> 2.0'
 # gem for authenticate users and company
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 # gem for datepicker
+# gem carrierwave
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem 'dotenv-rails'
+gem 'fog'
 
 gem 'bootstrap-select-rails'
 gem 'momentjs-rails', '>= 2.9.0'
