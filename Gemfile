@@ -51,6 +51,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'activeadmin', github: 'activeadmin'
+gem "sentry-raven"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -27,3 +27,9 @@ module Enode
   end
 
 end
+Raven.configure do |config|
+  config.dsn = {
+    :sentry_dns => ENV['sentry_dns']
+  }
+end
+
