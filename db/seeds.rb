@@ -21,12 +21,12 @@
 # end
 
 
-Area.create!(nombre: "logistica")
-Type.create!(nombre: "practica")
+# Area.create!(nombre: "logistica")
+# Type.create!(nombre: "practica")
 
 
 # z = Region.create(nombre: 'metropolitana')
-#
+
 # City.create!([
 # 	{nombre: "Quinta Normal", region: z},
 # 	{nombre: "Recoleta", region: z},
