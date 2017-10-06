@@ -21,25 +21,25 @@
 # end
 
 
-# z = Area.create!(nombre: "logistica")
-# b = Type.create!(nombre: "practica")
+Area.create!(nombre: "logistica")
+Type.create!(nombre: "practica")
 
 
-z = Region.create(nombre: 'metropolitana')
-
-City.create!([
-	{nombre: "Quinta Normal", region: z},
-	{nombre: "Recoleta", region: z},
-	{nombre: "Renca", region: z},
-	{nombre:"San Miguel", region: z},
-	{nombre: "San Joaquín", region: z},
-	{nombre: "San Ramón", region: z},
-	{nombre: "Santiago", region: z},
-	{nombre: "Vitacura", region: z},
-    {nombre: "El Monte", region: z},
-    {nombre: "Isla de Maipo", region: z},
-    {nombre: "Padre Hurtado", region: z},
-    {nombre: "Peñaflor", region:z},
-    {nombre: "Talagante", region: z}])
+# z = Region.create(nombre: 'metropolitana')
+#
+# City.create!([
+# 	{nombre: "Quinta Normal", region: z},
+# 	{nombre: "Recoleta", region: z},
+# 	{nombre: "Renca", region: z},
+# 	{nombre:"San Miguel", region: z},
+# 	{nombre: "San Joaquín", region: z},
+# 	{nombre: "San Ramón", region: z},
+# 	{nombre: "Santiago", region: z},
+# 	{nombre: "Vitacura", region: z},
+#     {nombre: "El Monte", region: z},
+#     {nombre: "Isla de Maipo", region: z},
+#     {nombre: "Padre Hurtado", region: z},
+#     {nombre: "Peñaflor", region:z},
+#     {nombre: "Talagante", region: z}])
 
 #AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Applications</h1>
+<h1>postulations</h1>
 
 <table>
   <thead>
@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-    <% @applications.each do |application| %>
+    <% @postulations.each do |postulation| %>
       <tr>
-        <td><%= application.user %></td>
-        <td><%= application.publication %></td>
-        <td><%= application.contenido %></td>
-        <td><%= link_to 'Show', publication_application %></td>
-        <!-- <td><%= link_to 'Edit', edit_application_path(application) %></td>
-        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <td><%= postulation.user %></td>
+        <td><%= postulation.publication %></td>
+        <td><%= postulation.contenido %></td>
+        <td><%= link_to 'Show', publication_postulation %></td>
+        <!-- <td><%= link_to 'Edit', edit_postulation_path(postulation) %></td>
+        <td><%= link_to 'Destroy', postulation, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<!-- <%= link_to 'New Application', new_publication_application_path %> -->
+<!-- <%= link_to 'New Application', new_publication_postulation_path %> -->

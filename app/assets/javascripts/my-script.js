@@ -1,4 +1,4 @@
-$(document).on("ready", function() {
+$(document).on('turbolinks:load', function() {
   if ($('#datetimepicker1').length >= 1) {
     $('#datetimepicker1').datetimepicker({
       //format: 'DD/MM/YYYY',
