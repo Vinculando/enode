@@ -6,5 +6,5 @@ class Publication < ApplicationRecord
   has_many :interest_publications
   has_many :interests, through: :interest_publications
 
-  has_many :applications
+  has_many :postulations
 end
