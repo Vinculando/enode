@@ -8,14 +8,14 @@
               	  <h5 class="centered"><%= current_entity.razon %></h5>
 
                   <li class="mt">
-                      <a href="<%= dashboards_company_path %>">
+                      <a href="<%= dashboards_company_path %>" >
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="<%= edit_company_registration_path %>" >
+                      <a href="<%= edit_company_registration_path %>" data-no-turbolink= "false" >
                           <i class="fa fa-cogs"></i>
                           <span>Perfil</span>
                       </a>
@@ -29,7 +29,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="<%= new_publication_path %>" >
+                      <a href="<%= new_publication_path %>" data-no-turbolink= "false" >
                           <i class="fa fa-desktop"></i>
                           <span>Crear Publicacion</span>
                       </a>

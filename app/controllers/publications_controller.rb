@@ -41,6 +41,22 @@ class PublicationsController < ApplicationController
     end
   end
 
+  def postular
+    @postulacion = Application.new()
+    @postulacion.user_id = current_user.id
+    @postulacion.publication_id = params[:id]
+    @postulacion.contenido = params[:contenido]
+    respond_to do |format|
+      if @postulacion.save
+        format.html { redirect_to @publication, notice: 'Publication was successfully created.' }
+        format.json { render :show, status: :created, location: @publication }
+      else
+        format.html { render :new }
+        format.json { render json: @publication.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # PATCH/PUT /publications/1
   # PATCH/PUT /publications/1.json
   def update

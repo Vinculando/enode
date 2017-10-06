@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   devise_for :companies, path: 'companies', controllers: {
     registrations: 'companies/registrations'
   }
-  
+
   devise_for :users, path: 'users', controllers: {
     registrations: 'users/registrations'
       }
