@@ -5,5 +5,5 @@ class Company < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 has_many :publications
-belongs_to :city
+belongs_to :city, optional: true
 end

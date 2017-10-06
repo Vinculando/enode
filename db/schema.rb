@@ -46,16 +46,6 @@ ActiveRecord::Schema.define(version: 20170926195259) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "applications", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "publication_id"
-    t.text     "contenido"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["publication_id"], name: "index_applications_on_publication_id", using: :btree
-    t.index ["user_id"], name: "index_applications_on_user_id", using: :btree
-  end
-
   create_table "areas", force: :cascade do |t|
     t.string   "nombre"
     t.datetime "created_at", null: false
@@ -135,12 +125,22 @@ ActiveRecord::Schema.define(version: 20170926195259) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "application_id"
+    t.integer  "postulation_id"
     t.string   "nombre"
     t.text     "mensaje"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["application_id"], name: "index_messages_on_application_id", using: :btree
+    t.index ["postulation_id"], name: "index_messages_on_postulation_id", using: :btree
+  end
+
+  create_table "postulations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "publication_id"
+    t.text     "contenido"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["publication_id"], name: "index_postulations_on_publication_id", using: :btree
+    t.index ["user_id"], name: "index_postulations_on_user_id", using: :btree
   end
 
   create_table "publications", force: :cascade do |t|
@@ -233,13 +233,13 @@ ActiveRecord::Schema.define(version: 20170926195259) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   end
 
-  add_foreign_key "applications", "publications"
-  add_foreign_key "applications", "users"
   add_foreign_key "cities", "regions"
   add_foreign_key "companies", "cities"
   add_foreign_key "interest_publications", "interests"
   add_foreign_key "interest_publications", "publications"
-  add_foreign_key "messages", "applications"
+  add_foreign_key "messages", "postulations"
+  add_foreign_key "postulations", "publications"
+  add_foreign_key "postulations", "users"
   add_foreign_key "publications", "areas"
   add_foreign_key "publications", "companies"
   add_foreign_key "publications", "types"
