@@ -4,7 +4,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-              	  <p class="centered"><a href="<%= edit_company_registration_path %>"><img src="<%= current_entity.avatar %>" class="img-circle" width="100"></a></p>
+              	  <p class="centered"><a href="<%= edit_company_registration_path %>"><img src="<%= current_entity.avatar.url %>" class="img-circle" width="100"></a></p>
               	  <h5 class="centered"><%= current_entity.razon %></h5>
 
                   <li class="mt">
@@ -22,14 +22,17 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="<%= publications_path %>" >
                           <i class="fa fa-desktop"></i>
                           <span>Publicaciones</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="<%= publications_path %>" >Mis publicaciones</a></li>
-                          <li><a  href="<%= new_publication_path %>" >Crear Publicacion</a></li>
-                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="<%= new_publication_path %>" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Crear Publicacion</span>
+                      </a>
                   </li>
 
               </ul>

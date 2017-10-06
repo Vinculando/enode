@@ -2542,6 +2542,15 @@ output {
   line-height: 1.42857143;
   color: #555;
 }
+.form-control-file {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555;
+  background-image: none;
+}
 .form-control {
   display: block;
   width: 100%;
