@@ -18,5 +18,6 @@
 //= require bootstrap-datetimepicker.min
 //= require bootstrap-select
 //= require common-scripts
+//= require publications
 //= require my-script
 //= require turbolinks

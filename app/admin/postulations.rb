@@ -1,4 +1,4 @@
-ActiveAdmin.register Application do
+ActiveAdmin.register Postulation do
 
     menu priority: 6
 

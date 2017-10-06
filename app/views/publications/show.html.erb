@@ -55,7 +55,7 @@
       <div class="form-panel">
         <h4><i class="fa fa-angle-right"></i> Acciones</h4>
         <%= link_to 'Editar', edit_publication_path(@publication), class: "btn btn-default btn-lg" %>
-        <%= link_to 'Postulaciones', publication_applications_path(@publication), class: "btn btn-info btn-lg" %>
+        <%= link_to 'Postulaciones', publication_postulations_path(@publication), class: "btn btn-info btn-lg" %>
         <%= link_to 'Eliminar', @publication, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-lg" %>
       </div>
   </div>

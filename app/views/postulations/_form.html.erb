@@ -1,10 +1,10 @@
-<%= form_for[@publication, Application.new] do |f| %>
-  <% if application.errors.any? %>
+<%= form_for[@postulation, Postulation.new] do |f| %>
+  <% if postulation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(application.errors.count, "error") %> prohibited this application from being saved:</h2>
+      <h2><%= pluralize(postulation.errors.count, "error") %> prohibited this application from being saved:</h2>
 
       <ul>
-      <% application.errors.full_messages.each do |message| %>
+      <% postulation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
