@@ -9,39 +9,15 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require Chart.bundle
-//= require chartkick
-//= require Chart
+//
 //= require jquery
-//= require jquery-1.8.3.min
-//= require bootstrap.min
-//= require bootstrap-select
-//= require jquery.dcjqaccordion.2.7
-//= require jquery.scrollTo.min
-//= require jquery.nicescroll
-//= require jquery.sparkline
-//= require common-scripts
-//= require jquery.gritter
-//= require gritter-conf
-//= require sparkline-chart
-//= require moment
-//= require moment/es.js
-//= require bootstrap-datetimepicker
-//= require bootstrap-select
 //= require jquery_ujs
+//= require moment
+//= require moment/es
+//= require bootstrap.min
+//= require bootstrap-datetimepicker.min
+//= require bootstrap-select
+//= require common-scripts
+//= require publications
+//= require my-script
 //= require turbolinks
-
-
-$("turbolinks:load", function () {
-                $('#datetimepicker2').datetimepicker({
-                  format: 'DD/MM/YYYY',
-                  icons: {
-                    time: "fa fa-clock-o",
-                    date: "fa fa-calendar",
-                    up: "fa fa-arrow-up",
-                    down: "fa fa-arrow-down",
-                    previous: "fa fa-chevron-left",
-                    next: "fa fa-chevron-right"
-                }
-                });
-            });

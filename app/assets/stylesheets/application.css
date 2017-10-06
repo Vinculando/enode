@@ -13,10 +13,9 @@
  *= stub active_admin
  *= require bootstrap
  *= require font-awesome
- *= require jquery.gritter
  *= require style
  *= require style-responsive
- *= require bootstrap-datetimepicker
+ *= require bootstrap-datetimepicker.min
  *= require bootstrap-select
  *= require_tree .
  *= require_self

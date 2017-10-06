@@ -16,7 +16,7 @@ belongs_to :city
 				puts  "ERROR: #{m.id} -> #{e.to_s}"
 			end
 		end
-	end 
+	end
 
 
 
