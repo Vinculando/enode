@@ -1,4 +1,4 @@
-<%= form_for[@postulation, Postulation.new] do |f| %>
+<%= form_for([@publication, @publication.postulations.build]) do |f| %>
   <% if postulation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(postulation.errors.count, "error") %> prohibited this application from being saved:</h2>

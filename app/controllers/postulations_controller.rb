@@ -29,7 +29,7 @@ class PostulationsController < ApplicationController
     respond_to do |format|
       if @postulation.save
         format.html { redirect_to @postulation, notice: 'Application was successfully created.' }
-        format.json { render :show, status: :created, location: @postulation }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @postulation.errors, status: :unprocessable_entity }
