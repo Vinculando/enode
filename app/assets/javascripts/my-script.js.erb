@@ -13,9 +13,21 @@ document.addEventListener("turbolinks:load", function(event) {
       }
     });
   }
+  if ($('#datetimepicker2').length >= 1) {
+    $('#datetimepicker2').datetimepicker({
+      format: 'DD/MM/YYYY',
+      icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-arrow-up",
+        down: "fa fa-arrow-down",
+        previous: "fa fa-chevron-left",
+        next: "fa fa-chevron-right"
+      }
+    });
+  }
 
-  $('.selectpicker').selectpicker({
-    iconBase: 'fontawesome',
-    tickIcon: 'facheck'
+  $('.selectpicker').select2({
+    theme: "bootstrap"
   });
 });

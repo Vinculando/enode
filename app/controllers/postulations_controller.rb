@@ -4,7 +4,8 @@ class PostulationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
-    @postulations = Postulation.where(publication: params[:publication_id])
+    publication = Publication.find(params[:publication_id])
+    @postulations = publication.postulations.order('created_at DESC')
   end
 
   # GET /applications/1

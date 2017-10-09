@@ -46,6 +46,7 @@ gem 'dotenv-rails'
 gem 'fog'
 
 gem 'bootstrap-select-rails'
+gem "select2-rails"
 gem 'momentjs-rails', '>= 2.9.0'
 # gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 # gem for pagination
