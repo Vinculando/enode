@@ -52,6 +52,7 @@ gem 'momentjs-rails', '>= 2.9.0'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'activeadmin', github: 'activeadmin'
+gem "sentry-raven"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

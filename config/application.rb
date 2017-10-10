@@ -27,3 +27,7 @@ module Enode
   end
 
 end
+Raven.configure do |config|
+  config.dsn = 'https://00b5bf5e021145f1b99e04bf91521002:b03fc9c9e49441928675bb2ec2defc8c@sentry.io/226719'
+end
+
