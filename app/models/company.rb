@@ -8,6 +8,7 @@ class Company < ApplicationRecord
 
 has_many :publications
 belongs_to :city
+
 	def self.recreate_avatar
 		Company.find_each do |m|
 			begin
@@ -17,8 +18,5 @@ belongs_to :city
 			end
 		end
 	end
-
-
-
 
 end

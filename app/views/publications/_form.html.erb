@@ -24,14 +24,14 @@
       <%= f.text_field :limite, class: "form-control", id: 'datetimepicker1'%>
     </div>
     <div class="form-group">
-      <%= f.label :area_id, class: "col-sm-4 col-sm-4 control-label" %>
-      <%= f.select :area_id, options_for_select(Area.all.collect{ |c| [c.nombre, c.id] }),{}, {class: "form-control selectpicker"}  %>
+      <%= f.label 'Area', class: "col-sm-4 col-sm-4 control-label" %><br/>
+      <%= collection_select :publication, :area_id, Area.all, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
     </div>
   </div>
   <div class="col-lg-6">
     <div class="form-group">
-      <%= f.label 'Tipo de publicacion', class: "col-sm-4 col-sm-4 control-label" %>
-      <%= f.select :type_id, options_for_select(Type.all.collect{ |c| [c.nombre, c.id] }),{}, {class: "form-control selectpicker"}  %>
+      <%= f.label 'Tipo de publicacion', class: "col-sm-4 col-sm-4 control-label" %><br/>
+      <%= collection_select :publication, :type_id, Type.all, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
     </div>
   </div>
 </div>
@@ -62,4 +62,3 @@
   </div>
 </div>
 <% end %>
-<%= javascript_include_tag 'publications', 'data-turbolinks-track': 'reload' %>

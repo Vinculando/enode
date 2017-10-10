@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>User:</strong>
-  <%= @postulation.user %>
-</p>
-
-<p>
-  <strong>Publication:</strong>
-  <%= @postulation.publication %>
-</p>
-
-<p>
-  <strong>Contenido:</strong>
-  <%= @postulation.contenido %>
-</p>
-
-<%= link_to 'Edit', edit_postulation_path(@postulation) %> |
-<%= link_to 'Back', postulations_path %>
+<div class="row mt">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="form-panel">
+      <div class="row">
+        <div class="col-lg-9 col-lg-offset-1">
+          <h2>
+            <%= @postulation.user.nombre %> <%= @postulation.user.paterno %> <%= @postulation.user.materno %>
+          </h2>
+          <ul>
+            <li><%= @postulation.user.genero %></li>
+            <li><%= @postulation.user.university.nombre %></li>
+            <li><%= @postulation.user.careers %></li>
+          </ul>
+          <h4>
+            <i class="fa fa-arrow-right"></i>
+            Postulacion</h4>
+          <p>
+            <%= @postulation.contenido %>
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%= link_to 'Edit', edit_publication_postulation_path(@postulation) %>
+|
+<%= link_to 'Back', publication_postulations_path %>

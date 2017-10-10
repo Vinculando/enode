@@ -11,22 +11,20 @@
     <div class="form-panel">
       <div class="row">
         <div class="col-lg-7 col-lg-offset-1">
-          <%= publication.titulo %>
-          <br>
-          <%= publication.limite %>
-          <br>
-          <%= publication.type.nombre %>
-          <br>
-          <%= publication.problema %>
-          <br>
-          <%= publication.area.nombre %>
-          <br>
-          <%= link_to 'Ver Publicacion', publication %>
+          <h4><i class="fa fa-angle-right"></i><%= publication.titulo %></h4>
+          <p class="margin-minus-minus">
+            <span class="label label-primary"><%= publication.type.nombre %></span>
+            <span class="label label-info"><%= publication.area.nombre %></span>
+            <%= publication.limite.strftime("%d-%m-%Y") %>
+          </p>
+          <p>
+            <%= publication.problema %>
+          </p>
+          <%= link_to 'Ver Publicacion', publication, class: "btn btn-success btn-xs" %>
         </div>
         <div class="col-lg-3">
-          <%= publication.company.razon %>
-          <br>
-          <%= publication.company.email %>
+          <h4><%= publication.company.razon %></h4>
+          <%= image_tag(current_entity.avatar.url, width: 100)%>
         </div>
         <!--
   <%= link_to 'Edit', edit_publication_path(publication) %>

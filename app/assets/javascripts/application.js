@@ -16,7 +16,7 @@
 //= require moment/es
 //= require bootstrap.min
 //= require bootstrap-datetimepicker.min
-//= require bootstrap-select
+//= require select2-full
 //= require common-scripts
 //= require publications
 //= require my-script
