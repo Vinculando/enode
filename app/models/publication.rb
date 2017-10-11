@@ -8,13 +8,14 @@ class Publication < ApplicationRecord
 
   has_many :postulations
 
-  validates_presence_of :titulo, :problema, :limite, :description, :premios, message: 'no puede estar en blanco'
-  validate :validates_fecha
-
-  def validates_fecha
-    if limite.to_datetime < Date.current.to_s
-      errors.add(:message, "la fecha #{limite} no puede ser menor a la fecha actual")
-    end
-  end
+  validates_presence_of :titulo, :problema, :description, :premios, message: 'no puede estar en blanco'
+  
+  # validate :validates_fecha
+  #
+  # def validates_fecha
+  #   if limite.to_datetime < Date.current.to_s
+  #     errors.add(:message, "la fecha #{limite} no puede ser menor a la fecha actual")
+  #   end
+  # end
 
 end
