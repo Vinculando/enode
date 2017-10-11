@@ -7,7 +7,7 @@ class Company < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_many :publications
+has_many :publications, dependent: :destroy
 belongs_to :city
 
 	def self.recreate_avatar
