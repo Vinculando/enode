@@ -1,6 +1,6 @@
 class PostulationsController < ApplicationController
-  before_action :set_postulation, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_entity!
+  load_and_authorize_resource
+
   # GET /applications
   # GET /applications.json
   def index
@@ -26,6 +26,8 @@ class PostulationsController < ApplicationController
   # POST /applications.json
   def create
     @postulation = Postulation.new(postulation_params)
+    @postulation.publication_id = params[:publication_id]
+    @postulation.user_id = current_user.id
 
     respond_to do |format|
       if @postulation.save

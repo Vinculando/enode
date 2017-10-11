@@ -22,4 +22,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def current_ability
+    if company_signed_in?
+      @current_ability ||= Ability.new(current_company)
+    else
+      @current_ability ||= Ability.new(current_user)
+    end
+  end
+
 end
