@@ -32,5 +32,14 @@
   </section>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+  $(document).on('turbolinks:load', function() {
+      $("#btnPostulacion").on('click', function(e){
+        e.preventDefault();
+        $('#new_postulation').submit();
+        e.stopImmediatePropagation();
+      });
+  });
+  </script>
   </body>
 </html>
