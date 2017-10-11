@@ -35,8 +35,8 @@
             <%= f.text_field :rubro, class: "form-control" %>
           </div>
 
-        </div>
-        <div class="col-lg-6">
+          </div>
+          <div class="col-lg-6">
           <div class="form-group">
             <%= f.label :direccion, class: "col-sm-4 col-sm-4 control-label" %><br/>
             <%= f.text_field :direccion, class: "form-control" %>
@@ -47,9 +47,19 @@
             <%= f.number_field :telefono, class: "form-control" %>
           </div>
 
+<<<<<<< HEAD
           <div class="form-group">
             <%= f.label 'ciudad', class: "col-sm-4 col-sm-4 control-label" %><br/>
             <%= collection_select :company, :city_id, City.all, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
+=======
+          <div class="field">
+            <%= f.label 'Región' %><br />
+            <%= f.collection_select :region_id, Region.order(:nombre), :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
+          </div>
+          <div class="field">
+            <%= f.label 'Ciudad' %><br />
+            <%= f.grouped_collection_select :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
+>>>>>>> ajax
           </div>
 
         </div>

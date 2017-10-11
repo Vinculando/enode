@@ -1,0 +1,74 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file. JavaScript code in this file should be added after the last require_* statement.
+//
+// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery
+//= require jquery_ujs
+//= require moment
+//= require moment/es
+//= require bootstrap.min
+//= require bootstrap-datetimepicker.min
+//= require select2-full
+//= require bootstrap-select
+//= require common-scripts
+//= require publications
+//= require my-script
+//= require turbolinks
+
+$(document).on('turbolinks:load', function(){
+    jQuery(function() {
+	  	var cities;
+	  	cities = $('#user_city_id').html();
+	  	console.log(cities);
+  		$('#user_region_id').change(function() {
+		    var region, options;
+		    region = $('#user_region_id :selected').text();
+		    console.log(region);
+		    escaped_region = region.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+		    options = $(cities).filter("optgroup[label=" + escaped_region + "]").html();
+		    console.log(options);
+		    if (options) {
+		    	$('#user_city_id').empty();
+		     	$('#user_city_id').html(options);
+		     	$('.selectpicker').selectpicker('refresh');
+		    } else {
+		      	$('#user_city_id').empty();
+		      	$('.selectpicker').selectpicker('refresh');
+		    }
+
+	  	});
+
+	});
+	jQuery(function() {
+	  	var cities;
+	  	cities = $('#company_city_id').html();
+	  	console.log(cities);
+  		$('#company_region_id').change(function() {
+		    var region, options;
+		    region = $('#company_region_id :selected').text();
+		    console.log(region);
+		    escaped_region = region.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+		    options = $(cities).filter("optgroup[label=" + escaped_region + "]").html();
+		    console.log(options);
+		    if (options) {
+		    	$('#company_city_id').empty();
+		     	$('#company_city_id').html(options);
+		     	$('.selectpicker').selectpicker('refresh');
+		    } else {
+		      	$('#company_city_id').empty();
+		      	$('.selectpicker').selectpicker('refresh');
+		    }
+
+	  	});
+
+	});
+ 	  
+})

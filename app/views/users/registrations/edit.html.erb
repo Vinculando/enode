@@ -49,10 +49,15 @@
             <%= f.select(:genero, [ 'Masculino', 'Femenino' ],{include_blank: 'Selecciona genero'}, class: "form-control")%>
           </div>
 
-          <div class="form-group">
-            <%= f.label 'ciudad', class: "col-sm-4 col-sm-4 control-label"  %><br/>
-            <%= grouped_collection_select :user, :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"}  %>
+          <div class="field">
+            <%= f.label 'Región' %><br />
+            <%= f.collection_select :region_id, Region.order(:nombre), :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
           </div>
+          <div class="field">
+            <%= f.label 'Ciudad' %><br />
+            <%= f.grouped_collection_select :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
+          </div>
+          
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for:
             <%= resource.unconfirmed_email %></div>

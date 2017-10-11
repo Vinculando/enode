@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'dashboards/academico'
 
+  post 'dashboards/region_city'
+
   resources :publications do
     resources :postulations
   end

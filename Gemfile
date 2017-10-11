@@ -54,7 +54,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'activeadmin', github: 'activeadmin'
 gem "sentry-raven"
-
+gem 'bullet', group: 'development'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

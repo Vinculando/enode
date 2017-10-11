@@ -36,9 +36,13 @@
   </div>
 
   <div class="field">
-    <%= f.label 'ciudad' %><br />
-    <%= grouped_collection_select :company, :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {prompt: true}, {class: "form-control selectpicker", "data-live-search" => "true"}  %>
+      <%= f.label 'Región' %><br />
+      <%= f.collection_select :region_id, Region.order(:nombre), :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
   </div>
+  <div class="field">
+      <%= f.label 'Ciudad' %><br />
+       <%= f.grouped_collection_select :city_id, Region.order(:nombre), :cities, :nombre, :id, :nombre, {include_blank: true}, {class: "form-control selectpicker", "data-live-search" => "true"} %>
+    </div>
 
   <div class="field">
     <%= f.label 'Contraseña' %>
