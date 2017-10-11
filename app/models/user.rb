@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   has_many :user_interests
   has_many :interests, through: :user_interests
-  has_many :postulations
+  has_many :postulations, dependent: :destroy
 
   belongs_to :city
   has_one :disc_profile
