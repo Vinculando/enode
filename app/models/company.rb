@@ -10,7 +10,7 @@ class Company < ApplicationRecord
 has_many :publications, dependent: :destroy
 belongs_to :city
 
-validates_presence_of :email, :rut, :razon, :direccion, :rubro, :telefono, message: 'no puede estar en blanco'
+validates_presence_of :email, :rut, message: 'no puede estar en blanco'
 validates_uniqueness_of :email, :rut, message: "esta en uso"
 validates_format_of :rut,
                     :with => /\A(\d{1,3})\.(\d{1,3})\.(\d{1,3})\-(k|\d{1})\Z/i,
