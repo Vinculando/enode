@@ -45,6 +45,7 @@ gem "mini_magick"
 gem 'dotenv-rails'
 gem 'fog'
 
+gem 'validates_email_format_of'
 gem 'bootstrap-select-rails'
 gem "select2-rails"
 gem 'momentjs-rails', '>= 2.9.0'
