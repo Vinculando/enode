@@ -5,7 +5,7 @@ class PostulationsController < ApplicationController
   # GET /applications.json
   def index
     publication = Publication.find(params[:publication_id])
-    @postulations = publication.postulations.order('created_at DESC')
+    @postulations = publication.postulations.includes(:user).order('created_at DESC')
   end
 
   # GET /applications/1

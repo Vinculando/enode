@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
 
   devise_group :entity, contains: %i[user company]
 
+  rescue_from CanCan::AccessDenied do |exception|
+      redirect_to root_path, alert: exception.message
+    end
+
+
   def after_sign_out_path_for(resource_or_scope)
     if resource_or_scope == :user
       new_user_session_path

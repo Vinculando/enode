@@ -3,6 +3,8 @@
   <head>
     <title>Enode - Estudiantes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma On-line para vinculaciones de estudiantes con empresas que buscan estudiantes para practicas o resolver problemas.">
+    <meta name="keyword" content="Vinculaciones, Estudiante, Empresas, Practicas, Proyectos, Problemas, Postulaciones">
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
 
@@ -17,8 +19,19 @@
     <%= render "shared/sidebarUser"%>
       <section id="main-content">
           <section class="wrapper site-min-height">
-
               <div class="row">
+                <% if notice.present? %>
+                <div class="alert alert-success alert-dismissable">
+    						  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    						  <%= notice %>
+    						</div>
+                <% end %>
+                <% if alert.present? %>
+                <div class="alert alert-warning alert-dismissable">
+    						  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    						  <%= alert %>
+    						</div>
+                <% end %>
 
                 <%= yield %>
 

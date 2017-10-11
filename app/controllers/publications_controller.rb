@@ -5,9 +5,9 @@ class PublicationsController < ApplicationController
   # GET /publications.json
   def index
     if company_signed_in?
-      @publications = Publication.where(company_id: current_company.id).page(params[:page]).per(6)
+      @publications = Publication.includes(:type, :area, :company).where(company_id: current_company.id).page(params[:page]).per(6)
     else
-      @publications = Publication.order('created_at DESC').page(params[:page]).per(6)
+      @publications = Publication.includes(:type, :area, :company).order('created_at DESC').page(params[:page]).per(6)
     end
   end
 
