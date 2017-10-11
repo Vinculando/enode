@@ -25,7 +25,16 @@
 # Type.create!(nombre: "practica")
 
 
-# z = Region.create(nombre: 'metropolitana')
+
+ # z = Region.create(nombre: 'Valparaíso')
+
+ # City.create!([
+ # 	{nombre: "Casablanca", region: z},
+ # 	{nombre: "Concón", region: z},
+ # 	{nombre: "Viña del Mar", region: z},
+ # 	{nombre:"Puchuncaví", region: z},
+ # 	{nombre: "Quintero", region: z},
+ # 	{nombre: "Valparaíso", region: z}])
 
 # City.create!([
 # 	{nombre: "Quinta Normal", region: z},

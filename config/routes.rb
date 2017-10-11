@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'dashboards/company'
 
+  post 'dashboards/region_city'
+
   resources :publications do
     resources :postulations
   end
