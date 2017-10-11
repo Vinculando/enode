@@ -21,34 +21,35 @@
 # end
 
 
-# Area.create!(nombre: "logistica")
-# Type.create!(nombre: "practica")
+Area.create(nombre: "logistica")
+Type.create(nombre: "practica")
 
 
 
- # z = Region.create(nombre: 'Valparaíso')
+  x = Region.create(nombre: 'Valparaíso')
 
- # City.create!([
- # 	{nombre: "Casablanca", region: z},
- # 	{nombre: "Concón", region: z},
- # 	{nombre: "Viña del Mar", region: z},
- # 	{nombre:"Puchuncaví", region: z},
- # 	{nombre: "Quintero", region: z},
- # 	{nombre: "Valparaíso", region: z}])
+ City.create([
+ 	{nombre: "Casablanca", region: x},
+ 	{nombre: "Concón", region: x},
+ 	{nombre: "Viña del Mar", region: x},
+ 	{nombre:"Puchuncaví", region: x},
+ 	{nombre: "Quintero", region: x},
+ 	{nombre: "Valparaíso", region: x}])
 
-# City.create!([
-# 	{nombre: "Quinta Normal", region: z},
-# 	{nombre: "Recoleta", region: z},
-# 	{nombre: "Renca", region: z},
-# 	{nombre:"San Miguel", region: z},
-# 	{nombre: "San Joaquín", region: z},
-# 	{nombre: "San Ramón", region: z},
-# 	{nombre: "Santiago", region: z},
-# 	{nombre: "Vitacura", region: z},
-#     {nombre: "El Monte", region: z},
-#     {nombre: "Isla de Maipo", region: z},
-#     {nombre: "Padre Hurtado", region: z},
-#     {nombre: "Peñaflor", region:z},
-#     {nombre: "Talagante", region: z}])
+z = Region.create(nombre: 'Metropolitana')
+City.create([
+	{nombre: "Quinta Normal", region: z},
+	{nombre: "Recoleta", region: z},
+	{nombre: "Renca", region: z},
+	{nombre:"San Miguel", region: z},
+	{nombre: "San Joaquín", region: z},
+	{nombre: "San Ramón", region: z},
+	{nombre: "Santiago", region: z},
+	{nombre: "Vitacura", region: z},
+  {nombre: "El Monte", region: z},
+  {nombre: "Isla de Maipo", region: z},
+  {nombre: "Padre Hurtado", region: z},
+  {nombre: "Peñaflor", region:z},
+  {nombre: "Talagante", region: z}])
 
-#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create(email: 'admin@enode.cl', password: 'masterpassword', password_confirmation: 'masterpassword')
