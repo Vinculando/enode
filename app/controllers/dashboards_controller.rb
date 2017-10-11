@@ -1,12 +1,16 @@
 class DashboardsController < ApplicationController
   before_action :load_company, only: [:company]
   before_action :authenticate_entity!
-  before_action :load_user, only: [:student]
+  before_action :load_user, only: [:student, :academico]
 
   def student
   end
 
   def company
+  end
+
+  def academico
+    @user = User.find_by(id: current_user.id)
   end
 
   private

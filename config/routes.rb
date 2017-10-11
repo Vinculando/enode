@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'dashboards/company'
 
+  get 'dashboards/academico'
+
   resources :publications do
     resources :postulations
   end
